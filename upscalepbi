@@ -1,18 +1,17 @@
 param
 (
     [Parameter (Mandatory=$true)]
-    [string] $subscriptionId,
+    [object] $subscriptionId,
 
     [Parameter (Mandatory=$true)]
-    [string] $pbicapacityName,
+    [object] $pbicapacityName,
 
     [Parameter (Mandatory=$true)]
-    [string] $pbicapacityResoureGroup,
+    [object] $pbicapacityResoureGroup,
 
     [Parameter (Mandatory=$true)]
-    [string] $pbicapacitDestinationSKU
+    [object] $pbicapacitDestinationSKU
 )
-
 
 Connect-AzAccount -Identity
 Set-AzContext -Subscription $subscriptionId
