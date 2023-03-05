@@ -1,16 +1,16 @@
 param
 (
     [Parameter (Mandatory=$true)]
-    [object] $subscriptionId,
+    [string] $subscriptionId,
 
     [Parameter (Mandatory=$true)]
-    [object] $pbicapacityName,
+    [string] $pbicapacityName,
 
     [Parameter (Mandatory=$true)]
-    [object] $pbicapacityResoureGroup,
+    [string] $pbicapacityResoureGroup,
 
     [Parameter (Mandatory=$true)]
-    [object] $pbicapacitDestinationSKU
+    [string] $pbicapacitDestinationSKU
 )
 
 
