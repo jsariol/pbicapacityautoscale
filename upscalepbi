@@ -1,0 +1,24 @@
+param
+(
+    [Parameter (Mandatory=$true)]
+    [object] $subscriptionId
+)
+param
+(
+    [Parameter (Mandatory=$true)]
+    [object] $pbicapacityName
+)
+param
+(
+    [Parameter (Mandatory=$true)]
+    [object] $pbicapacityResoureGroup
+)
+param
+(
+    [Parameter (Mandatory=$true)]
+    [object] $pbicapacitDestinationSKU
+)
+
+Connect-AzAccount -Identity
+Set-AzContext -Subscription $subscriptionId
+Update-AzPowerBIEmbeddedCapacity -ResourceGroupName $pbicapacityResoureGroup -Name $pbicapacityName -Sku $pbicapacitDestinationSKU
